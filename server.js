@@ -4,7 +4,7 @@ const request = require("request");
 const cheerio = require("cheerio");
 
 var name;
-
+const PORT = process.env.PORT || 3003;
 app.get("/:beerName", (req, res) => {
   console.log("responding");
   console.log("params", req.params.beerName);
@@ -31,6 +31,6 @@ app.get("/:beerName", (req, res) => {
   );
 });
 
-app.listen(3003, () => {
+app.listen(PORT, () => {
   console.log("Server running on port 3003");
 });
