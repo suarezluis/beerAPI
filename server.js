@@ -34,3 +34,9 @@ app.get("/:beerName", (req, res) => {
 app.listen(PORT, () => {
   console.log("Server running on port 3003");
 });
+
+// Keep heroku awake
+var http = require("http");
+setInterval(function() {
+  http.get("http://suarezluis-beerapi.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
