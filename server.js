@@ -6,7 +6,7 @@ const cheerio = require("cheerio");
 var name;
 const PORT = process.env.PORT || 3003;
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -46,7 +46,7 @@ app.listen(PORT, () => {
 });
 
 // Keep heroku awake
-var http = require("http");
-setInterval(function() {
-  http.get("http://suarezluis-beerapi.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
+// var http = require("http");
+// setInterval(function() {
+//   http.get("http://suarezluis-beerapi.herokuapp.com");
+// }, 300000); // every 5 minutes (300000)
